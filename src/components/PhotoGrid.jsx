@@ -1,7 +1,7 @@
 import React from 'react';
 import { getCategoryLabel } from '../data/photos.js';
 
-export default function PhotoGrid({ photos }) {
+export default function PhotoGrid({ photos, onPhotoSelect }) {
   if (photos.length === 0) {
     return (
       <div className="photo-grid__empty">
@@ -22,6 +22,13 @@ export default function PhotoGrid({ photos }) {
             data-orientation={photo.orientation}
             key={photo.id}
             tabIndex="0"
+            onClick={() => onPhotoSelect(photo)}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                onPhotoSelect(photo);
+              }
+            }}
           >
             <img src={photo.src} alt={photo.alt || photo.title} loading="lazy" />
             <div className="photo-card__overlay">

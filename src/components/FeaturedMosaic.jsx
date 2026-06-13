@@ -1,7 +1,7 @@
 import React from 'react';
 import { getCategoryLabel } from '../data/photos.js';
 
-export default function FeaturedMosaic({ photos }) {
+export default function FeaturedMosaic({ photos, onPhotoSelect }) {
   return (
     <div className="featured-mosaic">
       {photos.map((photo, index) => (
@@ -9,6 +9,14 @@ export default function FeaturedMosaic({ photos }) {
           className={`mosaic-card mosaic-card--${index + 1}`}
           data-orientation={photo.orientation}
           key={photo.id}
+          tabIndex="0"
+          onClick={() => onPhotoSelect(photo)}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              onPhotoSelect(photo);
+            }
+          }}
         >
           <img src={photo.src} alt={photo.alt} loading={index === 0 ? 'eager' : 'lazy'} />
           <div className="mosaic-card__meta">

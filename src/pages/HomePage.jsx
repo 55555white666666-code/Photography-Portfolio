@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import CategoryFilter from '../components/CategoryFilter.jsx';
 import FeaturedMosaic from '../components/FeaturedMosaic.jsx';
+import PhotoDetailModal from '../components/PhotoDetailModal.jsx';
 import PhotoGrid from '../components/PhotoGrid.jsx';
 import SiteHeader from '../components/SiteHeader.jsx';
 import { categories, getPhotosByCategory, photos } from '../data/photos.js';
@@ -68,6 +69,7 @@ const contactItems = [
 export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [orderedCategories, setOrderedCategories] = useState(getInitialCategories);
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   const featuredPhotos = useMemo(
     () => photos.filter((photo) => photo.featured).slice(0, 6),
@@ -150,7 +152,7 @@ export default function HomePage() {
               适合放置最能代表个人风格的 4-6 张照片。
             </p>
           </div>
-          <FeaturedMosaic photos={featuredPhotos} />
+          <FeaturedMosaic photos={featuredPhotos} onPhotoSelect={setSelectedPhoto} />
         </section>
 
         <section id="archive" className="section section--archive" aria-labelledby="archive-title">
@@ -170,7 +172,7 @@ export default function HomePage() {
             onChange={setActiveCategory}
             onReorder={handleCategoryReorder}
           />
-          <PhotoGrid photos={visiblePhotos} />
+          <PhotoGrid photos={visiblePhotos} onPhotoSelect={setSelectedPhoto} />
         </section>
 
         <section id="about" className="about-section" aria-labelledby="about-title">
@@ -231,6 +233,11 @@ export default function HomePage() {
           </div>
         </section>
       </main>
+
+      <PhotoDetailModal
+        photo={selectedPhoto}
+        onClose={() => setSelectedPhoto(null)}
+      />
     </div>
   );
 }
