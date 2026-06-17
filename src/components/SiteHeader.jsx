@@ -5,7 +5,7 @@ export default function SiteHeader() {
     <header className="site-header">
       <a className="brand" href="#top" aria-label="返回首页">
         <span>季宏宇</span>
-        <span>Photography</span>
+        <span>摄影作品集</span>
       </a>
       <nav className="site-nav" aria-label="主导航">
         <a href="#featured">精选</a>

@@ -50,26 +50,34 @@ function getInitialCategories() {
 
 const equipmentItems = [
   {
-    label: 'Camera',
-    title: '全画幅 / 便携机身',
-    text: '用于风光、旅行、活动和日常记录，重视低光表现与画面宽容度。',
+    label: '相机',
+    title: '全画幅机身 / 轻量记录',
+    text: '用于风光、旅行、活动与日常观察，重视低光环境下的细节和画面宽容度。',
   },
   {
-    label: 'Lens',
-    title: '广角 / 标准定焦',
-    text: '广角负责空间感，定焦负责安静的人像、街头和细节观察。',
+    label: '镜头',
+    title: '广角 / 标准定焦 / 中长焦',
+    text: '广角负责空间与氛围，定焦和中长焦用于人像、街头以及更安静的细节观察。',
   },
   {
-    label: 'Direction',
-    title: '风光、旅行、人像、活动',
-    text: '偏向真实光线、克制色彩和电影感叙事，让照片自己说话。',
+    label: '拍摄方向',
+    title: '星空、风光、旅行与生活记录',
+    text: '偏向真实光线、克制色彩和电影感叙事，用影像整理我看见世界的方式。',
   },
 ];
 
 const contactItems = [
-  { label: 'Email', value: 'jihongyu@example.com', href: 'mailto:jihongyu@example.com' },
-  { label: 'WeChat', value: 'JiHongyu' },
-  { label: 'Social', value: '@jihongyu.photo' },
+  { label: '邮箱', value: 'jihongyu@example.com', href: 'mailto:jihongyu@example.com' },
+  { label: '微信', value: 'JiHongyu' },
+  { label: '社交平台', value: '@jihongyu.photo' },
+];
+
+const heroTags = ['星空摄影', '风光摄影', '旅行记录', '生活记录'];
+
+const aboutFacts = [
+  { label: '关注方向', value: '星空 / 风光 / 旅行 / 生活记录' },
+  { label: '影像风格', value: '安静、克制、重视光线与氛围' },
+  { label: '作品集用途', value: '整理个人摄影作品，作为简历中的视觉展示' },
 ];
 
 export default function HomePage() {
@@ -83,6 +91,18 @@ export default function HomePage() {
     [],
   );
   const heroPhoto = featuredPhotos[0] || photos[0];
+  const categoryCount = new Set(photos.map((photo) => photo.category)).size;
+  const heroMetaItems = [
+    { label: '作品', value: heroPhoto?.title || '精选作品' },
+    { label: '相机', value: heroPhoto?.camera || '待补充' },
+    { label: '镜头', value: heroPhoto?.lens || '待补充' },
+    { label: '地点', value: heroPhoto?.location || '个人影像归档' },
+  ];
+  const heroStats = [
+    { label: '作品数量', value: photos.length },
+    { label: '精选作品', value: featuredPhotos.length },
+    { label: '拍摄方向', value: categoryCount },
+  ];
 
   const visiblePhotos = useMemo(
     () => getPhotosByCategory(activeCategory),
@@ -143,36 +163,63 @@ export default function HomePage() {
             <img className="hero__image" src={heroPhoto.src} alt="" aria-hidden="true" />
           )}
           <div className="hero__shade" />
+          <div className="hero__fine-line" aria-hidden="true" />
           <div className="hero__content">
-            <p className="eyebrow">Personal Photography Portfolio</p>
-            <h1 id="hero-title">季宏宇 Photography</h1>
-            <p>
-              以风光、旅行记录和活动纪实为主，也在持续尝试安静克制的人像表达。
-              这里收集我想长期保留下来的影像瞬间。
+            <p className="eyebrow">季宏宇摄影作品集</p>
+            <h1 id="hero-title">季宏宇摄影作品集</h1>
+            <p className="hero__lead">
+              记录光落下的瞬间，也记录我看见世界的方式。
+            </p>
+            <p className="hero__subcopy">
+              一个用于整理星空、风光、旅行与生活记录的个人摄影作品集。
+              画面保持克制，把注意力留给光线、空间和真实的现场感。
             </p>
             <div className="hero__actions">
               <a className="button button--primary" href="#featured">
-                进入作品
+                精选作品
               </a>
-              <a className="button button--ghost" href="#contact">
-                联系我
+              <a className="button button--ghost" href="#archive">
+                查看全部作品
+              </a>
+              <a className="button button--quiet" href="#about">
+                关于我
               </a>
             </div>
+            <div className="hero__tags" aria-label="主要拍摄方向">
+              {heroTags.map((tag) => (
+                <span key={tag}>{tag}</span>
+              ))}
+            </div>
+            <div className="hero__stats" aria-label="作品集概览">
+              {heroStats.map((item) => (
+                <span key={item.label}>
+                  <strong>{item.value}</strong>
+                  <small>{item.label}</small>
+                </span>
+              ))}
+            </div>
           </div>
-          <aside className="hero__note" aria-label="作品集信息">
-            <span>Selected frames</span>
-            <strong>2025 - 2026</strong>
-            <p>Landscape / Travel / Portrait / Event</p>
+          <aside className="hero__note" aria-label="当前封面照片信息">
+            <span>封面作品</span>
+            <strong>{heroPhoto?.title || '精选作品'}</strong>
+            <dl className="hero__meta">
+              {heroMetaItems.map((item) => (
+                <div key={item.label}>
+                  <dt>{item.label}</dt>
+                  <dd>{item.value}</dd>
+                </div>
+              ))}
+            </dl>
           </aside>
         </section>
 
         <section id="featured" className="section section--featured" aria-labelledby="featured-title">
           <div className="section__heading">
-            <p className="eyebrow">Selected Works</p>
+            <p className="eyebrow">精选作品</p>
             <h2 id="featured-title">精选作品</h2>
             <p>
-              这里自动展示 `photos.js` 中标记为 `featured: true` 的作品，
-              适合放置最能代表个人风格的 4-6 张照片。
+              从当前作品中挑出更能代表观察方式和画面控制的照片。
+              它们不追求数量，而是作为作品集的第一组视觉印象。
             </p>
           </div>
           <FeaturedMosaic photos={featuredPhotos} onPhotoSelect={setSelectedPhoto} />
@@ -181,12 +228,12 @@ export default function HomePage() {
         <section id="archive" className="section section--archive" aria-labelledby="archive-title">
           <div className="section__heading section__heading--split">
             <div>
-              <p className="eyebrow">Archive</p>
+              <p className="eyebrow">作品归档</p>
               <h2 id="archive-title">分类作品</h2>
             </div>
             <p>
-              分类按钮会根据照片数据自动生成。以后新增分类时，先在照片里使用新的
-              `category`，再按需补充分类中文名即可。
+              所有照片都来自 `src/data/photos.js`。你可以按分类快速浏览，
+              也可以把“全部作品”展开成完整作品归档。
             </p>
           </div>
           <CategoryFilter
@@ -218,24 +265,35 @@ export default function HomePage() {
 
         <section id="about" className="about-section" aria-labelledby="about-title">
           <div className="about-section__intro">
-            <p className="eyebrow">About</p>
+            <p className="eyebrow">关于我</p>
             <h2 id="about-title">关于我</h2>
           </div>
           <div className="about-section__copy">
             <p>
-              我喜欢拍摄那些不急着被解释的画面：夜空下的山脊、清晨的雾气、
-              旅途中短暂停留的路口，以及自然光里安静的人像。
+              我热爱摄影，主要关注星空、风光、旅行与生活记录，也在持续尝试人像表达。
             </p>
             <p>
-              这个作品集会持续整理我的风光摄影、旅行记录、活动纪实和人像尝试。
-              视觉上尽量克制，把注意力留给照片本身。
+              对我来说，摄影是一种整理观察的方法：在光线、天气、空间和人物状态之间，
+              寻找值得被保留下来的瞬间。
             </p>
+            <p>
+              这个网站用于整理和展示我的个人摄影作品，也作为简历中的可视化作品集，
+              呈现我的审美判断、记录能力和持续创作过程。
+            </p>
+            <div className="about-section__facts" aria-label="作品集说明">
+              {aboutFacts.map((item) => (
+                <div key={item.label}>
+                  <span>{item.label}</span>
+                  <strong>{item.value}</strong>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         <section className="section section--gear" aria-labelledby="gear-title">
           <div className="section__heading">
-            <p className="eyebrow">Gear & Direction</p>
+            <p className="eyebrow">设备与方向</p>
             <h2 id="gear-title">设备与拍摄方向</h2>
           </div>
           <div className="info-grid">
@@ -251,9 +309,9 @@ export default function HomePage() {
 
         <section id="contact" className="contact-section" aria-labelledby="contact-title">
           <div>
-            <p className="eyebrow">Contact</p>
+            <p className="eyebrow">联系方式</p>
             <h2 id="contact-title">联系方式</h2>
-            <p>欢迎交流作品、课程展示、简历评估或拍摄合作。</p>
+            <p>适合放入简历、课程展示或作品集链接中，也欢迎交流作品与拍摄合作。</p>
           </div>
           <div className="contact-list">
             {contactItems.map((item) => (
