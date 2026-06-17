@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { getCategoryLabel } from '../data/photos.js';
+import { getCategoryLabel, getPhotoAltText } from '../data/photos.js';
 
 export default function PhotoDetailModal({ photo, onClose }) {
   const closeButtonRef = useRef(null);
@@ -56,7 +56,7 @@ export default function PhotoDetailModal({ photo, onClose }) {
         </button>
 
         <figure className="photo-modal__image-wrap">
-          <img src={photo.src} alt={photo.alt || photo.title} />
+          <img src={photo.src} alt={getPhotoAltText(photo)} />
         </figure>
 
         <aside className="photo-modal__info">

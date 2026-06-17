@@ -183,6 +183,35 @@ const defaultCategoryOrder = ['landscape', 'nature', 'portrait', 'travel', 'stre
 
 目前你还没有正式的星空摄影作品，所以 `astro` 被放在最后。以后有星空作品时，可以把它移动到更靠前的位置。
 
+## 如何把网站链接放进简历
+
+部署完成后，你会得到一个公开访问链接，例如 Netlify、Vercel 或 GitHub Pages 提供的网址。
+
+建议在简历中这样放：
+
+```text
+个人摄影作品集：White Photography
+链接：https://你的作品集网址
+内容：星空、风光、旅行与生活记录等个人摄影作品
+```
+
+如果简历支持超链接，可以把文字写成：
+
+```text
+White Photography｜个人摄影作品集
+```
+
+然后把它链接到你的网站地址。这样比直接放一长串 URL 更干净，也更适合给老师、同学、面试官或客户查看。
+
+网站的标题、分享描述和社交平台预览信息在 `index.html` 中维护。上线后，如果你有正式域名，可以把分享图和网址补得更完整：
+
+```html
+<meta property="og:image" content="https://你的域名/images/hero.png" />
+<meta property="og:url" content="https://你的域名/" />
+```
+
+微信、QQ、社交平台通常会读取 `index.html` 里的 Open Graph 信息。修改后如果分享预览没有立刻更新，可能是平台缓存，可以稍等一段时间或换一个新链接测试。
+
 ## 部署到 Netlify
 
 推荐使用 Git 连接部署：

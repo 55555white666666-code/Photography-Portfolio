@@ -4,7 +4,7 @@ import FeaturedMosaic from '../components/FeaturedMosaic.jsx';
 import PhotoDetailModal from '../components/PhotoDetailModal.jsx';
 import PhotoGrid from '../components/PhotoGrid.jsx';
 import SiteHeader from '../components/SiteHeader.jsx';
-import { categories, getPhotosByCategory, photos } from '../data/photos.js';
+import { categories, getPhotoAltText, getPhotosByCategory, photos } from '../data/photos.js';
 
 const CATEGORY_ORDER_STORAGE_KEY = 'jihongyu-photo-category-order-v3';
 const DEFAULT_ARCHIVE_CATEGORY = 'all';
@@ -205,7 +205,7 @@ export default function HomePage() {
       <main>
         <section className="hero" aria-labelledby="hero-title">
           {heroPhoto && (
-            <img className="hero__image" src={heroPhoto.src} alt="" aria-hidden="true" />
+            <img className="hero__image" src={heroPhoto.src} alt={getPhotoAltText(heroPhoto)} />
           )}
           <div className="hero__shade" />
           <div className="hero__fine-line" aria-hidden="true" />
@@ -381,6 +381,15 @@ export default function HomePage() {
           </div>
         </section>
       </main>
+
+      <footer className="site-footer">
+        <div>
+          <strong>White Photography</strong>
+          <span>季宏宇个人摄影作品集</span>
+        </div>
+        <p>© 2026 季宏宇。所有照片与文字仅用于个人作品展示。</p>
+        <p>联系：656295047@qq.com / 微信 White-_-Mao_Xiong</p>
+      </footer>
 
       <PhotoDetailModal
         photo={selectedPhoto}

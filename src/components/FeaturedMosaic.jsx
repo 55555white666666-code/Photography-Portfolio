@@ -1,5 +1,5 @@
 import React from 'react';
-import { getCategoryLabel } from '../data/photos.js';
+import { getCategoryLabel, getPhotoAltText } from '../data/photos.js';
 
 export default function FeaturedMosaic({ photos, onPhotoSelect }) {
   return (
@@ -18,7 +18,7 @@ export default function FeaturedMosaic({ photos, onPhotoSelect }) {
             }
           }}
         >
-          <img src={photo.src} alt={photo.alt} loading={index === 0 ? 'eager' : 'lazy'} />
+          <img src={photo.src} alt={getPhotoAltText(photo)} loading={index === 0 ? 'eager' : 'lazy'} />
           <div className="mosaic-card__meta">
             <p>{getCategoryLabel(photo.category)}</p>
             <h3>{photo.title}</h3>

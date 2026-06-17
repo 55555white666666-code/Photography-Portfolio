@@ -1,5 +1,5 @@
 import React from 'react';
-import { getCategoryLabel } from '../data/photos.js';
+import { getCategoryLabel, getPhotoAltText } from '../data/photos.js';
 
 export default function PhotoGrid({ photos, onPhotoSelect }) {
   if (photos.length === 0) {
@@ -30,7 +30,7 @@ export default function PhotoGrid({ photos, onPhotoSelect }) {
               }
             }}
           >
-            <img src={photo.src} alt={photo.alt || photo.title} loading="lazy" />
+            <img src={photo.src} alt={getPhotoAltText(photo)} loading="lazy" />
             <div className="photo-card__overlay">
               <p>{getCategoryLabel(photo.category)}</p>
               <h3>{photo.title}</h3>

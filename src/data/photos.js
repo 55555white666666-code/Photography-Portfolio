@@ -2594,7 +2594,7 @@ const editablePhotos = [
     date: "2025-07-20",
     camera: "iPhone 16 Pro",
     lens: "iPhone 16 Pro back triple camera 6.765mm f/1.78",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "苏州市-双凤镇的黄昏光影记录，捕捉天空、地景与暖色光线交汇的瞬间。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2614,7 +2614,7 @@ const editablePhotos = [
     date: "2024-08-05",
     camera: "iPhone 13",
     lens: "广角摄像头",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "重庆市-南岸区偶遇的彩虹瞬间，让城市天际线多了一层轻盈的色彩。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2634,7 +2634,7 @@ const editablePhotos = [
     date: "2024-08-11",
     camera: "iPhone 13",
     lens: "广角摄像头",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "黄龙国家级风景名胜区的山水风景记录，呈现自然景观的层次、色彩与空间感。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2654,7 +2654,7 @@ const editablePhotos = [
     date: "2024-08-11",
     camera: "iPhone 13",
     lens: "广角摄像头",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "黄龙国家级风景名胜区的山水风景记录，呈现自然景观的层次、色彩与空间感。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2674,7 +2674,7 @@ const editablePhotos = [
     date: "2024-08-11",
     camera: "iPhone 13",
     lens: "广角摄像头",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "黄龙国家级风景名胜区的山水风景记录，呈现自然景观的层次、色彩与空间感。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2694,7 +2694,7 @@ const editablePhotos = [
     date: "2024-08-12",
     camera: "iPhone 13",
     lens: "广角摄像头",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "九寨沟的山水风景记录，呈现自然景观的层次、色彩与空间感。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2714,7 +2714,7 @@ const editablePhotos = [
     date: "2024-08-12",
     camera: "iPhone 13",
     lens: "广角摄像头",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "九寨沟的山水风景记录，呈现自然景观的层次、色彩与空间感。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2734,7 +2734,7 @@ const editablePhotos = [
     date: "2024-08-12",
     camera: "iPhone 13",
     lens: "广角摄像头",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "九寨沟的山水风景记录，呈现自然景观的层次、色彩与空间感。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2754,7 +2754,7 @@ const editablePhotos = [
     date: "2024-08-12",
     camera: "iPhone 13",
     lens: "广角摄像头",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "九寨沟的山水风景记录，呈现自然景观的层次、色彩与空间感。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2774,7 +2774,7 @@ const editablePhotos = [
     date: "2026-03-14",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-顾村公园里的樱花记录，保留花枝、光线与季节气息之间的安静层次。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2794,7 +2794,7 @@ const editablePhotos = [
     date: "2026-03-14",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-顾村公园里的樱花记录，保留花枝、光线与季节气息之间的安静层次。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2814,7 +2814,7 @@ const editablePhotos = [
     date: "2026-03-14",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-顾村公园里的樱花记录，保留花枝、光线与季节气息之间的安静层次。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2834,7 +2834,7 @@ const editablePhotos = [
     date: "2026-03-14",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-顾村公园里的樱花记录，保留花枝、光线与季节气息之间的安静层次。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2854,7 +2854,7 @@ const editablePhotos = [
     date: "2026-03-14",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-顾村公园中的花卉细节，记录植物在自然光下的色彩与姿态。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2874,7 +2874,7 @@ const editablePhotos = [
     date: "2026-03-14",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-顾村公园里的樱花记录，保留花枝、光线与季节气息之间的安静层次。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2894,7 +2894,7 @@ const editablePhotos = [
     date: "2026-03-14",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-顾村公园里的樱花记录，保留花枝、光线与季节气息之间的安静层次。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2914,7 +2914,7 @@ const editablePhotos = [
     date: "2026-03-14",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-顾村公园里的樱花记录，保留花枝、光线与季节气息之间的安静层次。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2934,7 +2934,7 @@ const editablePhotos = [
     date: "2026-03-14",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-顾村公园里的樱花记录，保留花枝、光线与季节气息之间的安静层次。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2954,7 +2954,7 @@ const editablePhotos = [
     date: "2026-03-14",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-顾村公园里的樱花记录，保留花枝、光线与季节气息之间的安静层次。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2974,7 +2974,7 @@ const editablePhotos = [
     date: "2026-03-14",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-顾村公园里的樱花记录，保留花枝、光线与季节气息之间的安静层次。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -2994,7 +2994,7 @@ const editablePhotos = [
     date: "2026-03-21",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "太仓市-西景瑞翡翠湾中的花卉细节，记录植物在自然光下的色彩与姿态。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -3014,7 +3014,7 @@ const editablePhotos = [
     date: "2026-03-22",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "苏州市-双凤镇中的花卉细节，记录植物在自然光下的色彩与姿态。",
     featured: false,
     orientation: "竖图",
     tags: [
@@ -3034,7 +3034,7 @@ const editablePhotos = [
     date: "2026-03-28",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 50mm f/1.8 S",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-罗溪公园中的花卉细节，记录植物在自然光下的色彩与姿态。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -3054,7 +3054,7 @@ const editablePhotos = [
     date: "2026-03-28",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 50mm f/1.8 S",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-罗溪公园中的花卉细节，记录植物在自然光下的色彩与姿态。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -3074,7 +3074,7 @@ const editablePhotos = [
     date: "2026-03-28",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 50mm f/1.8 S",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-罗溪公园中的花卉细节，记录植物在自然光下的色彩与姿态。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -3094,7 +3094,7 @@ const editablePhotos = [
     date: "2026-04-25",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-大宁公园中的花卉细节，记录植物在自然光下的色彩与姿态。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -3114,7 +3114,7 @@ const editablePhotos = [
     date: "2026-04-25",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-大宁公园中的花卉细节，记录植物在自然光下的色彩与姿态。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -3134,7 +3134,7 @@ const editablePhotos = [
     date: "2026-04-25",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-大宁公园中的花卉细节，记录植物在自然光下的色彩与姿态。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -3154,7 +3154,7 @@ const editablePhotos = [
     date: "2026-05-01",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "太仓市-海运堤风情水街中的花卉细节，记录植物在自然光下的色彩与姿态。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -3174,7 +3174,7 @@ const editablePhotos = [
     date: "2026-05-01",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "太仓市-海运堤风情水街中的花卉细节，记录植物在自然光下的色彩与姿态。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -3194,7 +3194,7 @@ const editablePhotos = [
     date: "2026-03-14",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-顾村公园的黄昏光影记录，捕捉天空、地景与暖色光线交汇的瞬间。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -3214,7 +3214,7 @@ const editablePhotos = [
     date: "2026-03-14",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-顾村公园的黄昏光影记录，捕捉天空、地景与暖色光线交汇的瞬间。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -3234,7 +3234,7 @@ const editablePhotos = [
     date: "2026-03-14",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-顾村公园的黄昏光影记录，捕捉天空、地景与暖色光线交汇的瞬间。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -3274,7 +3274,7 @@ const editablePhotos = [
     date: "2026-05-01",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "太仓市-海运堤风情水街的黄昏光影记录，捕捉天空、地景与暖色光线交汇的瞬间。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -3294,7 +3294,7 @@ const editablePhotos = [
     date: "2026-05-01",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "太仓市-海运堤风情水街的黄昏光影记录，捕捉天空、地景与暖色光线交汇的瞬间。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -3314,7 +3314,7 @@ const editablePhotos = [
     date: "2026-03-22",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "苏州市-双凤镇中的花卉细节，记录植物在自然光下的色彩与姿态。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -3334,7 +3334,7 @@ const editablePhotos = [
     date: "2026-03-22",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "苏州市-双凤镇中的花卉细节，记录植物在自然光下的色彩与姿态。",
     featured: false,
     orientation: "竖图",
     tags: [
@@ -3354,7 +3354,7 @@ const editablePhotos = [
     date: "2026-03-22",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 24-200mm f/4-6.3 VR",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "苏州市-双凤镇中的花卉细节，记录植物在自然光下的色彩与姿态。",
     featured: false,
     orientation: "横图",
     tags: [
@@ -3374,7 +3374,7 @@ const editablePhotos = [
     date: "2026-03-28",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 50mm f/1.8 S",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-罗溪公园中的人像尝试，记录人物状态与周围环境之间的自然关系。",
     featured: false,
     orientation: "竖图",
     tags: [
@@ -3394,7 +3394,7 @@ const editablePhotos = [
     date: "2026-03-28",
     camera: "NIKON Z5_2",
     lens: "NIKKOR Z 50mm f/1.8 S",
-    description: "这张作品的信息还没有完善，可以在 photos.js 中修改标题、地点、时间和简介。",
+    description: "上海市-罗溪公园中的人像尝试，记录人物状态与周围环境之间的自然关系。",
     featured: false,
     orientation: "竖图",
     tags: [
@@ -3431,11 +3431,52 @@ function normalizePhoto(photo, index) {
     id: `photo-${index + 1}`,
     ...photo,
   };
+  const description =
+    normalizedPhoto.description &&
+    !normalizedPhoto.description.includes('这张作品的信息还没有完善')
+      ? normalizedPhoto.description
+      : createPhotoDescription(normalizedPhoto);
 
   return {
     ...normalizedPhoto,
+    description,
     tags: Array.isArray(normalizedPhoto.tags) ? normalizedPhoto.tags : [],
   };
+}
+
+function createPhotoDescription(photo) {
+  const tags = Array.isArray(photo.tags) ? photo.tags : [];
+  const location = photo.location && photo.location !== '未填写' ? photo.location : '';
+
+  if (tags.includes('樱花')) {
+    return `${location || '春日公园'}里的樱花记录，保留花枝、光线与季节气息之间的安静层次。`;
+  }
+
+  if (tags.includes('花卉')) {
+    return `${location || '自然环境'}中的花卉细节，记录植物在自然光下的色彩与姿态。`;
+  }
+
+  if (tags.includes('落日') || tags.includes('黄昏')) {
+    return `${location || '日落时分'}的黄昏光影记录，捕捉天空、地景与暖色光线交汇的瞬间。`;
+  }
+
+  if (tags.includes('山水') || photo.title.includes('九寨沟') || photo.title.includes('黄龙')) {
+    return `${location || '旅途中'}的山水风景记录，呈现自然景观的层次、色彩与空间感。`;
+  }
+
+  if (tags.includes('彩虹')) {
+    return `${location || '城市旅途中'}偶遇的彩虹瞬间，让城市天际线多了一层轻盈的色彩。`;
+  }
+
+  if (tags.includes('人像')) {
+    return `${location || '自然光环境'}中的人像尝试，记录人物状态与周围环境之间的自然关系。`;
+  }
+
+  if (tags.includes('街景')) {
+    return `${location || '城市街头'}的街景观察，记录日常空间里的结构、光线与生活气息。`;
+  }
+
+  return `${location ? `${location}的` : ''}${getCategoryLabel(photo.category)}作品，记录一次值得保留下来的光线与现场。`;
 }
 
 // 页面实际读取的是 photos。
@@ -3446,6 +3487,31 @@ export const photos = editablePhotos
 
 export function getCategoryLabel(category) {
   return categoryLabels[category] || category;
+}
+
+export function getPhotoAltText(photo) {
+  if (!photo) {
+    return '季宏宇摄影作品';
+  }
+
+  const genericAltTexts = new Set([
+    photoDefaults.alt,
+    '季宏宇拍摄的摄影作品',
+  ]);
+  const hasSpecificAlt = photo.alt && !genericAltTexts.has(photo.alt);
+
+  if (hasSpecificAlt) {
+    return photo.alt;
+  }
+
+  const categoryLabel = getCategoryLabel(photo.category);
+  const titleText = photo.title ? `《${photo.title}》` : '';
+  const locationText =
+    photo.location && photo.location !== '未填写'
+      ? `，拍摄于${photo.location}`
+      : '';
+
+  return `季宏宇拍摄的${categoryLabel}作品${titleText}${locationText}`;
 }
 
 export function sortPhotosByFeatured(photoList) {
