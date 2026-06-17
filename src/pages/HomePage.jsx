@@ -6,13 +6,19 @@ import PhotoGrid from '../components/PhotoGrid.jsx';
 import SiteHeader from '../components/SiteHeader.jsx';
 import { categories, getPhotosByCategory, photos } from '../data/photos.js';
 
-const CATEGORY_ORDER_STORAGE_KEY = 'jihongyu-photo-category-order';
+const CATEGORY_ORDER_STORAGE_KEY = 'jihongyu-photo-category-order-v3';
+const DEFAULT_ARCHIVE_CATEGORY = 'all';
+const ALL_PHOTOS_INITIAL_LIMIT = 12;
 
 function sortCategoriesBySavedOrder(baseCategories, savedOrder) {
   const categoryMap = new Map(baseCategories.map((category) => [category.id, category]));
-  const normalizedSavedOrder = savedOrder.includes('all')
-    ? savedOrder
-    : ['all', ...savedOrder];
+  const normalizedSavedOrder = [
+    'all',
+    'featured',
+    ...savedOrder.filter(
+      (categoryId) => categoryId !== 'all' && categoryId !== 'featured',
+    ),
+  ];
   const savedCategories = normalizedSavedOrder
     .map((categoryId) => categoryMap.get(categoryId))
     .filter(Boolean);
@@ -67,23 +73,33 @@ const contactItems = [
 ];
 
 export default function HomePage() {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState(DEFAULT_ARCHIVE_CATEGORY);
   const [orderedCategories, setOrderedCategories] = useState(getInitialCategories);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
+  const [isAllPhotosExpanded, setIsAllPhotosExpanded] = useState(false);
 
   const featuredPhotos = useMemo(
     () => photos.filter((photo) => photo.featured).slice(0, 6),
     [],
   );
   const heroPhoto = featuredPhotos[0] || photos[0];
-  const heroStyle = heroPhoto
-    ? { '--hero-image': `url(${JSON.stringify(heroPhoto.src)})` }
-    : undefined;
 
   const visiblePhotos = useMemo(
     () => getPhotosByCategory(activeCategory),
     [activeCategory],
   );
+  const isAllCategory = activeCategory === 'all';
+  const shownPhotos =
+    isAllCategory && !isAllPhotosExpanded
+      ? visiblePhotos.slice(0, ALL_PHOTOS_INITIAL_LIMIT)
+      : visiblePhotos;
+  const hasHiddenAllPhotos =
+    isAllCategory && visiblePhotos.length > ALL_PHOTOS_INITIAL_LIMIT;
+
+  function handleCategoryChange(categoryId) {
+    setActiveCategory(categoryId);
+    setIsAllPhotosExpanded(false);
+  }
 
   function handleCategoryReorder(sourceCategoryId, targetCategoryId) {
     setOrderedCategories((currentCategories) => {
@@ -122,7 +138,10 @@ export default function HomePage() {
       <SiteHeader />
 
       <main>
-        <section className="hero" aria-labelledby="hero-title" style={heroStyle}>
+        <section className="hero" aria-labelledby="hero-title">
+          {heroPhoto && (
+            <img className="hero__image" src={heroPhoto.src} alt="" aria-hidden="true" />
+          )}
           <div className="hero__shade" />
           <div className="hero__content">
             <p className="eyebrow">Personal Photography Portfolio</p>
@@ -173,10 +192,28 @@ export default function HomePage() {
           <CategoryFilter
             activeCategory={activeCategory}
             categories={orderedCategories}
-            onChange={setActiveCategory}
+            onChange={handleCategoryChange}
             onReorder={handleCategoryReorder}
           />
-          <PhotoGrid photos={visiblePhotos} onPhotoSelect={setSelectedPhoto} />
+          <PhotoGrid photos={shownPhotos} onPhotoSelect={setSelectedPhoto} />
+          {hasHiddenAllPhotos && (
+            <div className="archive-more">
+              <button
+                className="button button--ghost archive-more__button"
+                type="button"
+                onClick={() => setIsAllPhotosExpanded((currentValue) => !currentValue)}
+              >
+                {isAllPhotosExpanded
+                  ? `收起到前 ${ALL_PHOTOS_INITIAL_LIMIT} 张`
+                  : `查看全部 ${visiblePhotos.length} 张作品`}
+              </button>
+              {!isAllPhotosExpanded && (
+                <p>
+                  已先展示 {ALL_PHOTOS_INITIAL_LIMIT} 张，手机端可以按分类继续浏览。
+                </p>
+              )}
+            </div>
+          )}
         </section>
 
         <section id="about" className="about-section" aria-labelledby="about-title">
