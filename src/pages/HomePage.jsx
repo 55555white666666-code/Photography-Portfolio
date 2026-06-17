@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import CategoryFilter from '../components/CategoryFilter.jsx';
 import FeaturedMosaic from '../components/FeaturedMosaic.jsx';
 import PhotoDetailModal from '../components/PhotoDetailModal.jsx';
@@ -67,9 +67,9 @@ const equipmentItems = [
 ];
 
 const contactItems = [
-  { label: '邮箱', value: 'jihongyu@example.com', href: 'mailto:jihongyu@example.com' },
-  { label: '微信', value: 'JiHongyu' },
-  { label: '社交平台', value: '@jihongyu.photo' },
+  { label: '邮箱', value: '656295047@qq.com', href: 'mailto:656295047@qq.com' },
+  { label: '电话', value: '15250407067' },
+  { label: '微信', value: 'White-_-Mao_Xiong' },
 ];
 
 const heroTags = ['星空摄影', '风光摄影', '旅行记录', '生活记录'];
@@ -85,6 +85,48 @@ export default function HomePage() {
   const [orderedCategories, setOrderedCategories] = useState(getInitialCategories);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   const [isAllPhotosExpanded, setIsAllPhotosExpanded] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return undefined;
+    }
+
+    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const revealTargets = Array.from(document.querySelectorAll('.reveal-on-scroll'));
+
+    if (revealTargets.length === 0) {
+      return undefined;
+    }
+
+    if (reducedMotionQuery.matches) {
+      revealTargets.forEach((target) => target.classList.add('is-revealed'));
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        rootMargin: '0px 0px -12% 0px',
+        threshold: 0.12,
+      },
+    );
+
+    revealTargets.forEach((target, index) => {
+      target.style.setProperty('--reveal-delay', `${Math.min(index % 6, 5) * 70}ms`);
+      observer.observe(target);
+    });
+
+    return () => observer.disconnect();
+  }, [activeCategory, isAllPhotosExpanded]);
 
   const featuredPhotos = useMemo(
     () => photos.filter((photo) => photo.featured).slice(0, 6),
@@ -155,6 +197,9 @@ export default function HomePage() {
 
   return (
     <div id="top" className="app-shell">
+      <div className="opening-mask" aria-hidden="true">
+        <span>季宏宇摄影作品集</span>
+      </div>
       <SiteHeader />
 
       <main>
@@ -166,10 +211,14 @@ export default function HomePage() {
           <div className="hero__fine-line" aria-hidden="true" />
           <div className="hero__content">
             <p className="eyebrow">季宏宇摄影作品集</p>
-            <h1 id="hero-title">季宏宇摄影作品集</h1>
-            <p className="hero__lead">
-              记录光落下的瞬间，也记录我看见世界的方式。
-            </p>
+            <div className="mask-reveal mask-reveal--title">
+              <h1 id="hero-title">季宏宇摄影作品集</h1>
+            </div>
+            <div className="mask-reveal mask-reveal--lead">
+              <p className="hero__lead">
+                记录光落下的瞬间，也记录我看见世界的方式。
+              </p>
+            </div>
             <p className="hero__subcopy">
               一个用于整理星空、风光、旅行与生活记录的个人摄影作品集。
               画面保持克制，把注意力留给光线、空间和真实的现场感。

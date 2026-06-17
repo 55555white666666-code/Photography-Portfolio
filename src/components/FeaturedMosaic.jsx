@@ -6,7 +6,7 @@ export default function FeaturedMosaic({ photos, onPhotoSelect }) {
     <div className="featured-mosaic">
       {photos.map((photo, index) => (
         <article
-          className={`mosaic-card mosaic-card--${index + 1}`}
+          className={`mosaic-card mosaic-card--${index + 1} reveal-on-scroll`}
           data-orientation={photo.orientation}
           key={photo.id}
           tabIndex="0"
