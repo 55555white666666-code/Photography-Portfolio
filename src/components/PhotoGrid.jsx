@@ -5,7 +5,7 @@ export default function PhotoGrid({ photos, onPhotoSelect }) {
   if (photos.length === 0) {
     return (
       <div className="photo-grid__empty">
-        这个分类还没有作品。以后把图片放到 public/images/，再在 photos.js 中新增一条数据即可。
+        这个分类暂时没有显示中的作品。可以在 photos.js 中把想展示的照片改为 visible: true。
       </div>
     );
   }

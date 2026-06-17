@@ -75,6 +75,10 @@ export default function HomePage() {
     () => photos.filter((photo) => photo.featured).slice(0, 6),
     [],
   );
+  const heroPhoto = featuredPhotos[0] || photos[0];
+  const heroStyle = heroPhoto
+    ? { '--hero-image': `url(${JSON.stringify(heroPhoto.src)})` }
+    : undefined;
 
   const visiblePhotos = useMemo(
     () => getPhotosByCategory(activeCategory),
@@ -118,7 +122,7 @@ export default function HomePage() {
       <SiteHeader />
 
       <main>
-        <section className="hero" aria-labelledby="hero-title">
+        <section className="hero" aria-labelledby="hero-title" style={heroStyle}>
           <div className="hero__shade" />
           <div className="hero__content">
             <p className="eyebrow">Personal Photography Portfolio</p>

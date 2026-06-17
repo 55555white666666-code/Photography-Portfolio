@@ -164,7 +164,7 @@ img {
   min-height: 100svh;
   align-items: end;
   padding: 150px clamp(20px, 5vw, 72px) clamp(44px, 8vw, 92px);
-  background: url("/images/hero.png") center / cover;
+  background: var(--hero-image, linear-gradient(135deg, #171818, #050606)) center / cover;
   isolation: isolate;
 }
 
