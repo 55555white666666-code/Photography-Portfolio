@@ -280,10 +280,6 @@ export default function HomePage() {
               <p className="eyebrow">作品归档</p>
               <h2 id="archive-title">分类作品</h2>
             </div>
-            <p>
-              所有照片都来自 `src/data/photos.js`。你可以按分类快速浏览，
-              也可以把“全部作品”展开成完整作品归档。
-            </p>
           </div>
           <CategoryFilter
             activeCategory={activeCategory}
@@ -360,7 +356,6 @@ export default function HomePage() {
           <div>
             <p className="eyebrow">联系方式</p>
             <h2 id="contact-title">联系方式</h2>
-            <p>适合放入简历、课程展示或作品集链接中，也欢迎交流作品与拍摄合作。</p>
           </div>
           <div className="contact-list">
             {contactItems.map((item) => (

@@ -840,6 +840,8 @@ img {
   padding: clamp(14px, 3vw, 34px);
   background: rgba(2, 3, 3, 0.78);
   backdrop-filter: blur(14px);
+  overscroll-behavior: contain;
+  touch-action: none;
   animation: modal-fade-in 180ms ease-out;
 }
 
@@ -857,6 +859,7 @@ img {
   border: 1px solid rgba(245, 239, 227, 0.16);
   border-radius: 10px;
   box-shadow: 0 28px 90px rgba(0, 0, 0, 0.55);
+  overscroll-behavior: contain;
   animation: modal-rise-in 220ms ease-out;
 }
 
@@ -909,6 +912,8 @@ img {
   align-self: center;
   max-height: calc(100svh - 86px);
   overflow: auto;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
   padding: clamp(16px, 2vw, 24px) clamp(8px, 1.5vw, 18px);
 }
 
